@@ -3,10 +3,13 @@ import java.util.List;
 
 public class JavaExercises {
 
-    /** Returns an array [1, 2, 3, 4, 5, 6] */
+    /**
+     * Returns an array [1, 2, 3, 4, 5, 6]
+     */
     public static int[] makeDice() {
         // TODO: Fill in this function.
-        return new int[]{1,2,3,4,5,6};
+        int[] arr={1,2,3,4,5,6};
+        return arr;
     }
 
     /** Returns the order depending on the customer.
@@ -15,31 +18,28 @@ public class JavaExercises {
      *  In any other case, return an empty String[] of size 3. */
     public static String[] takeOrder(String customer) {
         // TODO: Fill in this function.
-        if (customer.equals("Ergun")){
-            String[] s={"beyti", "pizza", "hamburger", "tea"};
-            return  s;
-        }else if (customer.equals("Erik")){
-            String[] s={"sushi", "pasta", "avocado", "coffee"};
-            return  s;
-        }else{
-            String[] s=new String[3];
-            return  s;
+        if (customer=="Ergun"){
+            String[] str={"beyti", "pizza", "hamburger", "tea"};
+            return  str;
+        }else if (customer=="Erik"){
+            String[] str={"sushi", "pasta", "avocado", "coffee"};
+            return  str;
         }
+        String[] str={"","",""};
+        return  str;
     }
 
     /** Returns the positive difference between the maximum element and minimum element of the given array.
      *  Assumes array is nonempty. */
     public static int findMinMax(int[] array) {
         // TODO: Fill in this function.
-        int max,min;
-        max=-12921;
-        min=12121;
-        for (int i = 0; i < array.length; i++) {
-            if (max<array[i]){
-                max=array[i];
+        int min=1211222,max=-121212;
+        for (int a:array){
+            if (a<min){
+                min=a;
             }
-            if (min>array[i]){
-                min=array[i];
+            if (a>max){
+                max=a;
             }
         }
         return max-min;
@@ -64,9 +64,11 @@ public class JavaExercises {
             return list;
         }
         if (x%2==0){
-            return  hailstoneHelper(x/2,list);
+            x=x/2;
+        }else{
+            x=x*3+1;
         }
-        return  hailstoneHelper(x*3+1,list);
+        return hailstoneHelper(x,list);
     }
 
 }

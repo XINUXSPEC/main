@@ -56,11 +56,15 @@ public class DessertTest {
                 .isEqualTo("I love dessert!");
 
         completed = true;
+
+
         // Check that assertions were run
         if (!completed) {
             String msg =
                     "Be sure to delete lines 24 and 60 of DessertTest.java once you've completed the Dessert class!";
             assertWithMessage(msg).fail();
         }
+
+
     }
 }
