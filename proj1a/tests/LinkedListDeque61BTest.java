@@ -138,7 +138,7 @@ public class LinkedListDeque61BTest {
         list.removeFirst();
         assertThat(list.toList()).isEmpty();
         list.addLast(1);
-        list.addLast(2);
+        list.addLast(2);//
         list.removeFirst();
         assertThat(list.toList()).containsExactly(2);
         list.removeFirst();
