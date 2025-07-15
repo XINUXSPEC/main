@@ -17,7 +17,7 @@ public class LinkedListDeque61B <T> implements Deque61B<T>{
         this.virtual=new Node<T>();
         size=0;
     }
-
+//
     @Override
     public void addFirst(T x) {
         this.size++;
